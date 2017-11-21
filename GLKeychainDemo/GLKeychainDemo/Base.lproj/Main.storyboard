@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DaO-aX-dWj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--GLKeychainDemo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码展示:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjc-DE-wzg">
+                                <rect key="frame" x="16" y="98" width="89" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="Npq-X8-Vkk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please input your password..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKd-7u-YTe">
+                                <rect key="frame" x="113" y="93" width="246" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHf-te-U2d">
+                                <rect key="frame" x="164" y="131" width="46" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="onSaveBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="REc-TP-w8a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpG-M1-Blc">
+                                <rect key="frame" x="164" y="169" width="46" height="30"/>
+                                <state key="normal" title="Read"/>
+                                <connections>
+                                    <action selector="onReadBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vlz-cq-i0n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCF-jf-YQb">
+                                <rect key="frame" x="276" y="131" width="83" height="98"/>
+                                <state key="normal" title="Clear Text"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onClearTextBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0iO-y9-Dp0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WCF-jf-YQb" secondAttribute="bottom" constant="438" id="3pV-RL-mAG"/>
+                            <constraint firstItem="pHf-te-U2d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="5Yf-SQ-Xqg"/>
+                            <constraint firstItem="nKd-7u-YTe" firstAttribute="trailing" secondItem="WCF-jf-YQb" secondAttribute="trailing" id="6fg-6S-7JX"/>
+                            <constraint firstItem="Gjc-DE-wzg" firstAttribute="centerY" secondItem="nKd-7u-YTe" secondAttribute="centerY" id="8xe-6m-jBL"/>
+                            <constraint firstItem="Gjc-DE-wzg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Aqa-nz-jZG"/>
+                            <constraint firstItem="pHf-te-U2d" firstAttribute="trailing" secondItem="lpG-M1-Blc" secondAttribute="trailing" id="GTg-6E-qnh"/>
+                            <constraint firstItem="nKd-7u-YTe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Guk-e4-DWI"/>
+                            <constraint firstItem="nKd-7u-YTe" firstAttribute="leading" secondItem="Gjc-DE-wzg" secondAttribute="trailing" constant="8" symbolic="YES" id="KFs-CR-GFH"/>
+                            <constraint firstItem="lpG-M1-Blc" firstAttribute="top" secondItem="pHf-te-U2d" secondAttribute="bottom" constant="8" symbolic="YES" id="LgW-KM-OvM"/>
+                            <constraint firstItem="Gjc-DE-wzg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="Q33-ZJ-v1x"/>
+                            <constraint firstItem="pHf-te-U2d" firstAttribute="top" secondItem="WCF-jf-YQb" secondAttribute="top" id="VRU-L3-gQu"/>
+                            <constraint firstItem="WCF-jf-YQb" firstAttribute="leading" secondItem="pHf-te-U2d" secondAttribute="trailing" constant="66" id="YI7-tD-As3"/>
+                            <constraint firstItem="pHf-te-U2d" firstAttribute="leading" secondItem="lpG-M1-Blc" secondAttribute="leading" id="b6p-Dq-C6R"/>
+                            <constraint firstItem="pHf-te-U2d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nzY-Ih-aQk"/>
+                            <constraint firstItem="pHf-te-U2d" firstAttribute="top" secondItem="nKd-7u-YTe" secondAttribute="bottom" constant="8" symbolic="YES" id="qsl-wv-RF4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="GLKeychainDemo" id="vrY-Tz-HE5"/>
+                    <connections>
+                        <outlet property="pwdTextField" destination="nKd-7u-YTe" id="EP6-pp-ke4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="290.39999999999998" y="26.53673163418291"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t6K-Xl-f5l">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DaO-aX-dWj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q13-Za-ov3">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RD7-kU-xc0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dLV-uv-TdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-556" y="27"/>
+        </scene>
+    </scenes>
+</document>
