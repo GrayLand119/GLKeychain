@@ -28,6 +28,16 @@ Apple 提供的 Keychain 服务 主要用来存取密码, 总的来说有以下�
 NSString *pwd = [[GLKeychain defaultManager] readPassword]; // 读密码
 ```
 
+# 安装
+
+```
+pod ‘GLKeychain’, ‘~> 0.0.1’
+
+或
+
+pod 'GLKeychain', :git => 'https://github.com/GrayLand119/GLKeychain.git'
+
+```
 
 # License
 
