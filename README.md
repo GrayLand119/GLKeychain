@@ -29,3 +29,6 @@ NSString *pwd = [[GLKeychain defaultManager] readPassword]; // 读密码
 ```
 
 
+# License
+
+GLKeychain is released under the Apache license. See [LICENSE](/LICENSE) for details.
